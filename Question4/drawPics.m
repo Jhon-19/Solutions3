@@ -4,7 +4,7 @@ T1 = t1;%第一时刻
 T2 = t1+t2;%第二时刻
 T3 = t1+t2+t3;%第三时刻
 T4 = t1+t2+t3+t4;%第四时刻
-figure(1);
+figure;
 %作第一阶段加速度图
 m_t1 = 0:step:T1;
 a1 = a*ones(1, length(m_t1));
@@ -43,7 +43,7 @@ v3 = v2(end)+a3.*(m_t3-T2);
 plot(m_t3, v3, 'b');
 hold on;
 %作第三阶段位移图
-x3 = x2(end)+(v3+v2).*(m_t3-T2)/2;
+x3 = x2(end)+(v3+v2(end)).*(m_t3-T2)/2;
 plot(m_t3, x3, 'k');
 hold on;
 
