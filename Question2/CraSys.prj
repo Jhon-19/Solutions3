@@ -1,0 +1,123 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="1349888503" file="D:\win7我的文档-桌面-收藏夹\Desktop\大二下课程\暑期数学建模\校赛\A\CODE\龙门吊模拟演示系统\CraSys.prj" location="D:\win7我的文档-桌面-收藏夹\Desktop\大二下课程\暑期数学建模\校赛\A\CODE\龙门吊模拟演示系统" name="CraSys" preferred-package-location="D:\win7我的文档-桌面-收藏夹\Desktop\大二下课程\暑期数学建模\校赛\A\CODE\龙门吊模拟演示系统\CraSys\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>CraSys</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.0</param.version>
+    <param.authnamewatermark>娴的汪</param.authnamewatermark>
+    <param.email>247692050@qq.com</param.email>
+    <param.company>None</param.company>
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.guid />
+    <param.installpath.string>\None\CraSys\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\CraSys\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\CraSys\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\CraSys\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\CraSys</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>false</param.web.mcr>
+    <param.package.mcr>true</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\CraSys.m</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\BackImg.jpg</file>
+    </fileset.resources>
+    <fileset.package />
+    <fileset.depfun />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\CraSys\for_testing" name="CraSys.exe" optional="false">D:\win7我的文档-桌面-收藏夹\Desktop\大二下课程\暑期数学建模\校赛\A\CODE\龙门吊模拟演示系统\CraSys\for_testing\CraSys.exe</file>
+      <file location="${PROJECT_ROOT}\CraSys\for_testing" name="readme.txt" optional="true">D:\win7我的文档-桌面-收藏夹\Desktop\大二下课程\暑期数学建模\校赛\A\CODE\龙门吊模拟演示系统\CraSys\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\CraSys\for_testing" name="splash.png" optional="false">D:\win7我的文档-桌面-收藏夹\Desktop\大二下课程\暑期数学建模\校赛\A\CODE\龙门吊模拟演示系统\CraSys\for_testing\splash.png</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>F:\2017Matlab\matlab</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="embeddedcoder" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.1</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
