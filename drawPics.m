@@ -72,4 +72,7 @@ text(T1, x1(end), [num2str(T1), ',', num2str(x1(end))]);
 text(T2, x2(end), [num2str(T2), ',', num2str(x2(end))]);
 text(T3, x3(end), [num2str(T3), ',', num2str(x3(end))]);
 text(T4, x4(end), [num2str(T4), ',', num2str(x4(end))]);
+
+xlabel('t/s');
+ylabel('a/(m/(s^2)) - v/(m/s) - x/m');
 end
