@@ -14,11 +14,11 @@ rb = [16;15];%右边界
 options_1 = gaoptimset('Generations', T/2);
 
 %t3-t1 <= 0;
-[x, fval, reason, output, last_gener] = ga(@test_func, 2, [-1, 1],[0],Aeq,beq,lb,rb,@nonlcon, options_1);
+[x, fval, reason, output, last_gener] = ga(@test_func_Q1_Q2, 2, [-1, 1],[0],Aeq,beq,lb,rb,@nonlcon, options_1);
 
 % last_gener:当前最后一次搜索的种群样本，在此基础再次搜索
 options_2 = gaoptimset('Generations', T/2, 'InitialPopulation', last_gener, 'PlotFcns', @gaplotbestf);
-[x, fval, reason, output, last_gener] = ga(@test_func, 2, [-1, 1],[0],Aeq,beq,lb,rb,@nonlcon, options_2);%接力进化
+[x, fval, reason, output, last_gener] = ga(@test_func_Q1_Q2, 2, [-1, 1],[0],Aeq,beq,lb,rb,@nonlcon, options_2);%接力进化
 % Bestx = x
 % BestFval = fval
 
@@ -52,3 +52,6 @@ disp(['t4 = ', num2str(t4)]);
 disp(['t总 = ', num2str(t_total)]);
 disp(['最大theta = ', num2str(thetaMax)]);
 disp(['最大v = ', num2str(VMax)]);
+
+%动画演示
+drawPics(t1,t2,t3,t4,a0);

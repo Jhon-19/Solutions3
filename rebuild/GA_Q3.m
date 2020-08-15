@@ -54,3 +54,6 @@ disp(['t4 = ', num2str(t4)]);
 disp(['t总 = ', num2str(t_total)]);
 disp(['最大theta = ', num2str(thetaMax)]);
 disp(['最大v = ', num2str(VMax)]);
+
+%t1~t4展示
+drawPics(t1,t2,t3,t4,a0);

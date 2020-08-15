@@ -1,4 +1,4 @@
-function value = test_func_Q3(x)%遗传算法的调用函数
+function value = test_func_Q3(x)
 
     global thetaMax VMax
     weight = [0.4 0.6];

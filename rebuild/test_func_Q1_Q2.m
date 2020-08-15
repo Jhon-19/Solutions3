@@ -1,12 +1,12 @@
-function value = test_func( x ) %遗传算法的调用函数
+function value = test_func_Q1_Q2( x ) 
 
     global thetaMax VMax
     
     a_speed_up = 0.5; %初始加速度大小为0.5m/s^2
     a_speed_down = -0.5;
-    distance_AB = 60;  %货船——码头：60m
-    distance_BC = 15;  %码头宽度：15m
-    rope_len = 15;   %缆绳长度为15m
+    distance_AB = 60; %货船——码头：60m
+    distance_BC = 15; %码头宽度：15m
+    rope_len = 15; %缆绳长度为15m
     m_goods = 6000; %货物质量为6000kg
     time_max = 120; %最长用时2分钟
     g = 9.8; %初始化重力加速度
@@ -14,7 +14,7 @@ function value = test_func( x ) %遗传算法的调用函数
     interval= 0.01; %设置时间精度
     
     t1 = x(1);
-    t3 = x(2); %将染色体赋值
+    t3 = x(2); 
     
     %阶段一匀加速后速度
     v1 = a_speed_up * t1;
@@ -64,26 +64,13 @@ function value = test_func( x ) %遗传算法的调用函数
     [v4] = Get_V_i_Hori(a_speed_up,a_speed_down, theta4_deri_st,  theta4_radian, is_draw,  t1,t2,t3,t4);
 
 
-    %计算各阶段给定theta和最大拉力下重物的最大质量
+    %计算各阶段给定theta和最大拉力下重物的最大质量?
     [m1] = quality(theta1_deri_rd, theta1_radian, a_speed_up);
     [m2] = quality(theta2_deri_rd, theta2_radian, a_speed_up);
     [m3] = quality(theta3_deri_rd, theta3_radian, a_speed_up);
     [m4] = quality(theta4_deri_rd, theta4_radian, a_speed_up);
 
-    %{
-    [theta1_rec_sec, theta1_rec_sec_pi, theta1_rec, theta1_rec_pi, theta1, theta1_pi] = GetTheta_T1(t1, a_speed_up, IsPic, time_exa);
-    [V_T1] = GetV_T1(t1, a_speed_up, theta1_rec, theta1, IsPic, time_exa);
-    [m_1] = GetT(theta1_rec_sec, theta1, a_speed_up);
-    [theta2_rec_sec, theta2_rec_sec_pi, theta2_rec, theta2_rec_pi, theta2, theta2_pi] = GetTheta_T2(t1, t2, a_speed_up, IsPic, time_exa);
-    [V_T2] = GetV_T2(t1, t2, a_speed_up, theta2_rec, theta2, IsPic, time_exa);
-    [m_2] = GetT(theta2_rec_sec, theta2, 0);
-    [theta3_rec_sec, theta3_rec_sec_pi, theta3_rec, theta3_rec_pi, theta3, theta3_pi] = GetTheta_T3(t1, t2, t3, a_speed_up, -a_speed_up, IsPic, time_exa);
-    [V_T3] = GetV_T3(t1, t3, a_speed_up, -a_speed_up, theta3_rec, theta3,  IsPic, time_exa);
-    [m_3] = GetT(theta3_rec_sec, theta3, -a_speed_up);
-    [theta4_rec_sec, theta4_rec_sec_pi, theta4_rec, theta4_rec_pi, theta4, theta4_pi] = GetTheta_T4(t4, theta3, theta3_rec, IsPic, time_exa);
-    [V_T4] = GetV_T4(t1, t3, t4, a_speed_up, -a_speed_up, theta4_rec, theta4,  IsPic, time_exa);
-    [m_4] = GetT(theta4_rec_sec, theta4, 0);
-    %}
+
 
     thetaMax = max(max(abs(theta4_degree)));
     VMax = abs(v4(end));
@@ -93,7 +80,7 @@ function value = test_func( x ) %遗传算法的调用函数
         return
     end
     
-    value = thetaMax; %适应度函数为B-C阶段摆角的最小值
+    value = thetaMax; 
     
     end
     
