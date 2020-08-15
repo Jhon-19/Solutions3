@@ -76,6 +76,8 @@ function drawPics(t1, t2, t3, t4, a)
     text(T3, x3(end), [num2str(T3), ',', num2str(x3(end))]);
     text(T4, x4(end), [num2str(T4), ',', num2str(x4(end))]);
 
-
-    end
+	xlabel('t/s');
+	ylabel('a/(m/(s^2)) - v/(m/s) - x/m');
+	% legend('a', 'v', 's');
+end
     

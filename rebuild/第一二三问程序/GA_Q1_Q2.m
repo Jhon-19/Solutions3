@@ -53,5 +53,5 @@ disp(['t总 = ', num2str(t_total)]);
 disp(['最大theta = ', num2str(thetaMax)]);
 disp(['最大v = ', num2str(VMax)]);
 
-%动画演示
+%a-t, v-t, s-t图像
 drawPics(t1,t2,t3,t4,a0);

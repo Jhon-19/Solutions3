@@ -46,14 +46,15 @@ t2 = S2 / v1;
 
 t4 = distance_BC / v2;
 t_total = t1 + t2 + t3 + t4;
-disp(['a0 = ', num2str(a0)]);
 disp(['t1 = ', num2str(t1)]);
 disp(['t2 = ', num2str(t2)]);
 disp(['t3 = ', num2str(t3)]);
 disp(['t4 = ', num2str(t4)]);
 disp(['t总 = ', num2str(t_total)]);
-disp(['最大theta = ', num2str(thetaMax)]);
-disp(['最大v = ', num2str(VMax)]);
+disp(['a = ', num2str(a0)]);
+disp(['最大θ = ', num2str(thetaMax)]);
+disp(['最大质量m = ', num2str(m_max)]);
+disp(['到C点的速度v = ', num2str(VMax)]);
 
 %t1~t4展示
 drawPics(t1,t2,t3,t4,a0);

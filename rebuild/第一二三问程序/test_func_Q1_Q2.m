@@ -1,6 +1,8 @@
 function value = test_func_Q1_Q2( x ) 
 
     global thetaMax VMax
+	
+	%rate = 0.5 %第二问的权值初始化
     
     a_speed_up = 0.5; %初始加速度大小为0.5m/s^2
     a_speed_down = -0.5;
@@ -64,11 +66,11 @@ function value = test_func_Q1_Q2( x )
     [v4] = Get_V_i_Hori(a_speed_up,a_speed_down, theta4_deri_st,  theta4_radian, is_draw,  t1,t2,t3,t4);
 
 
-    %计算各阶段给定theta和最大拉力下重物的最大质量?
-    [m1] = quality(theta1_deri_rd, theta1_radian, a_speed_up);
-    [m2] = quality(theta2_deri_rd, theta2_radian, a_speed_up);
-    [m3] = quality(theta3_deri_rd, theta3_radian, a_speed_up);
-    [m4] = quality(theta4_deri_rd, theta4_radian, a_speed_up);
+    %计算各阶段给定theta和最大拉力下重物的最大质量
+    % [m1] = quality(theta1_deri_rd, theta1_radian, a_speed_up);
+    % [m2] = quality(theta2_deri_rd, theta2_radian, a_speed_up);
+    % [m3] = quality(theta3_deri_rd, theta3_radian, a_speed_up);
+    % [m4] = quality(theta4_deri_rd, theta4_radian, a_speed_up);
 
 
 
@@ -80,7 +82,8 @@ function value = test_func_Q1_Q2( x )
         return
     end
     
-    value = thetaMax; 
+    value = thetaMax; %第一问将角度最小作为适应度函数
+	%value = sqrt((thetaMax/10*rate)^2+((1-rate)*(1-30/t_total))^2); %加权的摆角和总时间
     
     end
     
